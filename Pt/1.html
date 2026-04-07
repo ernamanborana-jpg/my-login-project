@@ -1,0 +1,70 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Project | Auth System</title>
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="3.cpp">
+</head>
+<body>
+
+    <div class="container" id="form-container">
+        <!-- Login Section -->
+        <div id="login-section">
+            <h2>Student Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="login-user" name="username" placeholder="Enter username" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-pass" name="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="footer-text">New student? <a href="javascript:void(0)" onclick="toggleForm()">Register here</a></p>
+        </div>
+
+        <!-- Register Section -->
+        <div id="register-section" style="display: none;">
+            <h2>Registration</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="reg-name" name="fullname" placeholder="Enter full name" required>
+                </div>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="reg-user" name="username" placeholder="Choose username" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-pass" name="password" placeholder="Create password" required>
+                </div>
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+            <p class="footer-text">Already registered? <a href="javascript:void(0)" onclick="toggleForm()">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to switch between Login and Register views
+        function toggleForm() {
+            const loginView = document.getElementById('login-section');
+            const registerView = document.getElementById('register-section');
+            
+            if (loginView.style.display === "none") {
+                loginView.style.display = "block";
+                registerView.style.display = "none";
+            } else {
+                loginView.style.display = "none";
+                registerView.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
